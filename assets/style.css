@@ -85,3 +85,44 @@ form ion-icon {
   align-items: center;
   justify-content: space-between;
 }
+.search-result .title {
+  color: whitesmoke;
+  margin: 20px 10px 0 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.view-btn {
+  text-decoration: none;
+  text-align: center;
+  width: 130px;
+  padding: 10px 0;
+  background-color: #404041;
+  color: whitesmoke;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 20px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+.item-data {
+  color: whitesmoke;
+  display: block;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  line-height: 2rem;
+}
+
+/* This is the style that will apply before initial class is removed */
+.container.initial .brand {
+  font-size: 7rem;
+}
+.container.initial form {
+  max-width: 800px;
+}
+.container.initial form input {
+  padding: 20px;
+  font-size: 3rem;
+}
+
+
