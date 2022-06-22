@@ -31,3 +31,21 @@ section {
   color: #ffff00;
   margin-bottom: 30px;
 }
+form {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: rgb(223, 223, 223);
+  box-shadow: 16px 14px 20px #000000;
+  border: 1px solid #ffd580;
+  border-radius: 8px;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  background-color: rgb(223, 223, 223);
+  display: inline-block;
+}
