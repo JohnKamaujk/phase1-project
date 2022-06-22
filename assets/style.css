@@ -71,7 +71,7 @@ form ion-icon {
 .item {
   width: 100%;
   border-radius: 8px;
-  background-color: rgb(37, 37, 37);
+  background-color: #6e260e;
   padding: 15px;
   overflow: hidden;
 }
@@ -91,12 +91,12 @@ form ion-icon {
   font-size: 1.8rem;
   font-weight: 400;
 }
-.view-btn {
+.checkout-btn {
   text-decoration: none;
   text-align: center;
   width: 130px;
   padding: 10px 0;
-  background-color: #404041;
+  background-color: #097969;
   color: whitesmoke;
   font-size: 1.4rem;
   font-weight: 600;
