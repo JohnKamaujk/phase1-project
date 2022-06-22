@@ -61,3 +61,17 @@ form ion-icon {
   color: rgb(75, 75, 75);
   display: inline-block;
 }
+.search-result {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+.item {
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(37, 37, 37);
+  padding: 15px;
+  overflow: hidden;
+}
