@@ -1,11 +1,17 @@
 // created an instance of form,result div & container div
-const searchForm = document.querySelector("form");
+const form = document.querySelector("form");
 const searchResultDiv = document.querySelector(".search-result");
 const container = document.querySelector(".container");
 let searchQuery = "";
 // used edamam free api for developers to get appId & key
 const appId = "84bee003";
 const appKey = "329155bd64ad8ebb0f33a82ffc58e501";
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  searchQuery = e.target.querySelector("input").value;
+  fetchAPI();
+});
 
 const fetchAPI = async () => {
   // Base url containing user query,appId & appKey
