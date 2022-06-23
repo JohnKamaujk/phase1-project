@@ -15,7 +15,7 @@ section {
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  background-image: url(/assets/images/backgroung.jpeg);
+  background-image: url(./images/backgroung.jpeg);
   background-size: cover;
 }
 img {
