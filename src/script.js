@@ -1,4 +1,3 @@
-// created an instance of form,result div & container div
 const form = document.querySelector("form");
 const searchResultDiv = document.querySelector(".search-result");
 const container = document.querySelector(".container");
@@ -10,15 +9,16 @@ const appKey = "329155bd64ad8ebb0f33a82ffc58e501";
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   searchQuery = e.target.querySelector("input").value;
-  fetchAPI();
+  getAPIData();
 });
 
-const fetchAPI = async () => {
-  // Base url containing user query,appId & appKey
+const getAPIData = async () => {
+  //Base url containing user query,appId & appKey
   const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${appId}&app_key=${appKey}&from=0&to=20`;
 
   const response = await fetch(baseURL);
   const data = await response.json();
+  //hits is a key of search query & it should contain 20 recipe items
   generateHTML(data.hits);
   console.log(data);
 };
@@ -37,11 +37,7 @@ const generateHTML = (results) => {
           }">Checkout Recipe</a>
         </div>
         <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)}</p>
-        <p class="item-data">Diet label: ${
-          result.recipe.dietLabels.length > 0
-            ? result.recipe.dietLabels
-            : "No Data Found"
-        }</p>
+        <p class="item-data">Cuisine type: ${result.recipe.cuisineType}</p>
         <p class="item-data">Health labels: ${result.recipe.healthLabels}</p>
       </div>
     `;
