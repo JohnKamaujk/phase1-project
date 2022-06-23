@@ -36,7 +36,7 @@ const generateHTML = (results) => {
             result.recipe.url
           }">Checkout Recipe</a>
         </div>
-        <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)}</p>
+        <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)} kcals</p>
         <p class="item-data">Cuisine type: ${result.recipe.cuisineType}</p>
         <p class="item-data">Health labels: ${result.recipe.healthLabels}</p>
       </div>
