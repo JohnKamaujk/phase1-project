@@ -6,7 +6,7 @@ Recipe Generating App is a web application which is designed to showcase a meal'
 on the web page.It provides detailed information about a meal including the calories it contain per kcal and also its Cuisine type & Country of origin.It also has an url link for directing
 the user to a page where he/she will find a detailed recipe on how to prepare the dish.
 ## Setup/Installation Requirements
-* Clone the repo {git clone https://github.com/JohnKamaujk/phase1-project}
+* Clone the repo {git clone https://github.com/JohnKamaujk/phase1-project
 * Type git clone on your terminal and paste the repo link
 * After cloning use VS Code to open the folder.
 * Run the apllication in the code editor using any browser
