@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-const searchResultDiv = document.querySelector(".search-result");
+const displayResultDiv = document.querySelector(".search-result");
 const container = document.querySelector(".container");
 let searchQuery = "";
 // used edamam free api for developers to get appId & key
@@ -19,15 +19,15 @@ const getAPIData = async () => {
   const response = await fetch(baseURL);
   const data = await response.json();
   //hits is a key of search query & it should contain 20 recipe items
-  generateHTML(data.hits);
+  createHTML(data.hits);
   console.log(data);
 };
 // function for generating html for display
-const generateHTML = (results) => {
+const createHTML = (results) => {
   container.classList.remove("initial");
-  let generatedHTML = "";
+  let createdHTML = "";
   results.map((result) => {
-    generatedHTML += `
+    createdHTML += `
       <div class="item">
         <img src="${result.recipe.image}" alt="img">
         <div class="flex-container">
@@ -36,11 +36,13 @@ const generateHTML = (results) => {
             result.recipe.url
           }">Checkout Recipe</a>
         </div>
-        <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)} kcals</p>
+        <p class="item-data">Calories: ${result.recipe.calories.toFixed(
+          2
+        )} kcals</p>
         <p class="item-data">Cuisine type: ${result.recipe.cuisineType}</p>
         <p class="item-data">Health labels: ${result.recipe.healthLabels}</p>
       </div>
     `;
   });
-  searchResultDiv.innerHTML = generatedHTML;
+  displayResultDiv.innerHTML = createdHTML;
 };
